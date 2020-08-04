@@ -1,0 +1,431 @@
+@media(max-width: 1441px) and (min-width: 766px){
+	.container{
+		max-width:980px !important;
+	}
+}
+
+header{
+	font-size: 15px;
+	background-color: black;
+}
+header .loft-city a{
+	
+	color: white !important;
+	font-weight: 300;
+	font-size: 14px;
+}
+.loft-city{
+	padding: 6px 30px 6px 66px;
+}
+.loft-city h2{
+	font-size: 24px;
+	margin: 0px;
+	font-weight: 400;
+	font-family: 'arial', sans-serif;
+}
+.loft-city h4{
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-size: 18px;
+	margin-top: 4px;
+	margin-left: 21px;
+}
+.left{
+	float: left;
+	display: flex;
+	color: #fff;
+}
+.right{
+	float: right;
+	display: flex;
+}
+.right p{
+	font-size: 14px;
+	margin:5px 20px 0px 0px;
+	color: white !important;
+	font-family: Arial,Helvetica,sans-serif;
+
+}
+.btn-submit{
+	background: white;
+    border: none;
+    color: black;
+    font-size: 12px;
+    padding: 0px 22px;
+    margin-top: 3px;
+    margin-bottom: 0px;
+    height: 24px;
+    margin-right: 4px;
+}
+.navbar-nav .nav-item a{
+	color: #000!important;
+}
+.navbar-nav li{
+	    border-left: 1px solid rgba(228, 228, 228, 1);
+	    padding: 0px 18px !important;
+}
+ul.navbar-nav{
+	margin-left: 100px;
+    padding: 3px 0px;
+    flex-direction: row;
+}
+.navbar-nav .nav-item a:active,
+.navbar-nav .nav-item a:hover,
+.navbar-nav .nav-item a:focus{
+	color: #AAA8A8!important;
+}
+.carousel-item .w-100{
+	height: 631px !important;
+}
+/* pad view */
+
+
+/*------------------------------ vertical bootstrap slider----------------------------*/
+
+.carousel-inner > .carousel-item.carousel-item-next,
+.carousel-inner > .carousel-item.active.carousel-item-right {
+  transform: translate3d(0, 100%, 0);
+  -webkit-transform: translate3d(0, 100%, 0);
+  -ms-transform: translate3d(0, 100%, 0);
+  -moz-transform: translate3d(0, 100%, 0);
+  -o-transform: translate3d(0, 100%, 0);
+ 
+}
+.carousel-inner > .carousel-item.carousel-item-prev,
+.carousel-inner > .carousel-item.active.carousel-item-left {
+  transform: translate3d(0, -100%, 0);
+  -webkit-transform: translate3d(0, -100%, 0);
+  -moz-transform: translate3d(0, -100%, 0);
+  -ms-transform: translate3d(0, -100%, 0);
+  -o-transform: translate3d(0, -100%, 0);
+ 
+}
+.carousel-inner > .carousel-item-next.carousel-item-left,
+.carousel-inner > .carousel-item-prev.carousel-item-right {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+}
+.form{
+	background-color: black;
+    padding: 17px 14px 12px 14px;
+    position: absolute;
+    top: 100px;
+    right: 0;
+    left: 0;
+    color: #fff;
+    font-size: 12px;
+}
+.form label{
+	margin-bottom: 2px;
+	font-family: "Open Sans",sans-serif;
+	line-height: 17px;
+}
+.form input{
+	height: 33px;
+    padding: 10px 12px;
+    margin-right: 8px !important;
+}
+.form input[type=date]{
+	width: 280px;
+}
+.form input[type=number]{
+	width: 88px;
+}
+.form input[type=search] {
+    -webkit-appearance: auto;
+    text-align: center;
+}
+.text-overlay{
+	position: absolute;
+    top:350px;
+    left: 0;
+    right: 0;
+}
+.under-overlay{
+	border: 0px solid rgba(228, 228, 228, 1);
+    background-color: rgba(255, 255, 255, 0.6);
+    padding:30px;
+	margin-left: 200px;
+    margin-right: 199px;
+
+}
+.text-overlay h2{
+	font-family: helvetica-w01-roman,helvetica-w02-roman,helvetica-lt-w10-roman,sans-serif;
+	font-size:60px;
+	line-height: 71px;
+    color: #000000;
+}
+.text-overlay h3,
+#loft-city-hoilday h3,
+.about h3,
+.service h3{
+	font: normal normal normal 48px/1.1em 'open sans condensed',sans-serif;
+    color: #000000;
+}
+#services .services{
+	display: inline-flex;
+	padding: 30px 0px;
+}
+.services img{
+	object-position: 50% 50%;
+    width: 43px;
+    height: 29px;
+    object-fit: contain;
+}
+.services span {
+	text-align: center;
+	padding-right: 15px;
+    padding-left: 70px;
+}
+.services h6{
+	padding-top: 15px;
+}
+#loft-city-hoilday,
+.about{
+	padding-top: 30px;
+	padding-bottom: 30px;
+	background-color: #F6F6F6;
+}
+#loft-city-hoilday h5,
+.nearby-me .map h5,
+.about h5,
+.contact-form h5
+{
+	font: normal normal normal 28px/1.4em 'open sans condensed',sans-serif;
+    color: #000000;
+}
+#list{
+	padding: 30px 37px 0px 37px;
+}
+.map h4,
+#people-say h4{
+	font: normal normal 600 32px/1.4em 'open sans condensed',sans-serif;
+    color: #000000;
+    margin-bottom: 20px;
+}
+.map li,
+.apart li,
+.service-list li{
+	margin-bottom: 3px;
+	margin-left: -20px;
+	font-weight: 300 !important;
+	font-family: 'open sans',sans-serif;
+	font-size: 15px;
+}
+.apart,
+.nearby,
+.about-sub-heading,
+.service,
+.service-list,
+.contact-form{
+	padding: 30px 0px;
+}
+.apart h3,
+.nearby-me h3,
+.about-sub-heading h3,
+.service-list h3{
+	font-size: 32px;
+	line-height: 2.4rem;
+	color: #000;
+	font-family: 'open sans condensed',sans-serif;
+	font-weight: 600;
+}
+.about-img{
+	background-size: auto;
+    background-repeat: repeat;
+    background-position: center center;
+    background-image: url('/php-project/img/61.jpg');
+    height: 350px;
+}
+.apart h5{
+	color: #616161;
+	font-family: 'Open Sans';
+	font-size: 22px;
+
+}
+p{
+	font-weight: 300!important;
+	font-size: 15px;
+	margin-bottom: 0px !important;
+}
+.margin-btm{
+	margin-bottom: 30px;
+}
+.img-2 img{
+	width: 173px;
+    height: 173px;
+    object-fit: cover;
+    padding: 10px;
+}
+.footer{
+	background-color: #000;
+	padding-top: 30px;
+}
+.footer h4{
+	font: normal normal 600 22px/1.4em 'open sans condensed',sans-serif;
+    color: #fff;
+    margin-bottom: 20px;
+}
+.footer p{
+	color: #fff;
+	font-size: 15px;
+	font-weight: 300!important;
+}
+.footer li{
+	color: #fff;
+	list-style-type: none;
+	font-size: 18px;
+	display:inline-flex;
+	margin-right: 16px;
+	margin-top: 30px;
+}
+.footer ul{
+	margin-left: -40px;
+}
+.cards img{
+	width: 43px;
+	height: 27px;
+}
+.copy-footer{
+	background-color: #F6F6F6;
+}
+.copy-write li{
+	font-size: 15px !important;
+}
+.copy-write ul.navbar-nav {
+	margin-left: 0px;
+	margin-bottom: 15px;
+}
+
+hr{
+	border-color: #F2CFB5 !important;
+}
+.apart input{
+	border-color: #F2CFB5 !important;
+	border: 1px solid;
+    font-size: 14px;
+    padding: 4px;
+    width: 174px;
+}
+.apart .btn{
+	border: 1px solid #D97B34 !important;
+    padding: 4px;
+    border-radius: unset;
+    width: 115px;
+    font-size: 14px;
+    background-color: #D97B34 !important;
+    color: #fff;
+}
+price{
+	font-size: 33px;
+	font-family: "Open Sans",sans-serif;
+	margin-bottom: 30px;
+	color: #616161 !important;
+}
+sub{
+	bottom: 0px !important;
+}
+.apart h6{
+	color: #616161 !important;
+    font-family: 'Open Sans';
+    font-weight: 700;
+    font-size: 18px;
+}
+.room-booking{
+	padding: 17px 0px;
+}
+.apart .btn1{
+	border: 1px solid #D97B34 !important;
+    padding: 5px;
+    border-radius: unset;
+    width: 120px;
+    font-size: 14px;
+    background-color: #D97B34 !important;
+    color: #fff;
+}
+i.far, i.fa, i.fas{
+	font-size: 20px !important;
+	padding: 0px 5px;
+	color: #000;
+}
+/*.data-show{
+	display: none;
+}*/
+button:focus {
+    outline: 0px auto -webkit-focus-ring-color !important;
+}
+.con-form input, 
+.con-form textarea{
+	margin-bottom: 5px;
+    font-size: 14px;
+    padding-left: 6px;
+    padding: 3px 4px 3px 11px;
+    border-radius: 0px !important;
+    border: 1px solid grey;
+}
+.con-form input[type=submit]{
+	background: #000;
+	color: #fff;
+	border:none;
+
+}
+.con-form input:hover,
+.con-form textarea:hover,
+.con-form input[type=submit]:hover{
+	background-color: #80808073;
+}
+.apart-left ol.carousel-indicators{
+	position: relative !important;
+	justify-content: normal;
+	margin:0px !important;
+	padding-bottom: 40px;
+}
+.apart-left .carousel-indicators li img{
+	width: 58px !important;
+	height: 48px !important;
+}
+.apart-left .carousel-indicators li{
+	width: 58px !important;
+}
+.apart-left .carousel-inner img{
+	height: 370px;
+	width: 100%;
+}
+.border-all input{
+	width: 100% !important;
+	padding-left: 10px !important;
+	padding: 5px 0px;
+}
+.border-all .book{
+	width: 100% !important;
+	margin-top:20px;
+	font-size: 15px !important;
+	padding:8px !important;
+	background-color: #D97B34 !important;
+	border: 1px solid #D97B34 !important;
+	color: white;
+}
+.table th, .table td, .table p,
+.table li{
+	font-size: 14.5px !important;
+	font-family: "Open Sans",sans-serif !important;
+	color: #000 !important;
+	border-top:0px !important;
+ }
+
+.table i.far,
+.table i.fa,
+.table i.fas{
+	font-size: 17px !important;
+	margin-right: 5px;
+	margin-bottom: 10px;
+	color: #000 !important;
+}
+/*#num{
+	display: none;
+}*/
+.img-gallery{
+	padding: 10px 2px;
+}
+.apart .room-booking-form input{
+	margin:-3px !important;
+}
