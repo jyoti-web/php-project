@@ -11,7 +11,7 @@
 				 		<h5>Our Rooms</h5>
 				 	</div>
 		 			<hr>
-					<form style="display: flex;" action="apart-suites.php" method="post" onsubmit="return false;">
+					<form style="display: flex;" action="#" method="post" onsubmit="return false;">
 						<span>
 							<input type="text" name="in" id="in" placeholder="Check-In" required >
 						</span>
@@ -49,21 +49,15 @@
 					</div>
 						<?php require_once("config.php");
 						$result1 = mysqli_query($conn,"SELECT * FROM project_product");
-						?>
-						<?php
 						if (mysqli_num_rows($result1) > 0) {
-						?>
-						<?php
 						$i=0;
-						?>
-
-						<?php
 						while($row = mysqli_fetch_array($result1)) {
-						?>	
-						<div class="room-booking" style="display: inline-flex;">
+						?>
+						<div class="room-booking" >
+						<a style='display: inline-flex; color:black; text-decoration:none;'
+						 href="single-page.php?page=single-page&id=<?=$row['id']; ?>">
 
 							<?php //echo $row["id"];?>
-						   	
 						    <?php echo '<img src=/php-project/img/'.$row["image"].' style="width:240px; height:170px;">'?>
 						    <span style="padding: 0px 40px 0px 25px; width: 445px;">
 						    	<h5 style="font-size:20px; font-weight: 700;"><?php echo $row["title"]; ?></h5>	    	
@@ -74,9 +68,10 @@
 						    <span class="price-booking text-center" style="padding-left:10px; padding-top: 25px;">
 								<sub>From</sub><br>
 								<price>$<?php echo $row["price"]; ?></price><br>
-								<a href="/php-project/apart-product.php"><button class="btn1" style="margin-top: 20px;">More Info</button></a>
+								<button class="btn1" style="margin-top: 20px;">More Info</button>
 						    </span>
 						    <?php //echo '<img src=/php-project/img/'.$row["files"].' style="width:300px; height:100px; object-fit:contain;">'?>
+						</a>
 						</div>
 						<hr>
 						<?php

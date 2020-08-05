@@ -35,7 +35,7 @@
 					        	<a class="nav-link" href="/php-project/index.php">Home <span class="sr-only">(current)</span></a>
 					        </li>
 					        <li class="nav-item">
-					        	<a class="nav-link" href="/php-project/apart-suites.php">Apartments & Suites</a>
+					        	<a class="nav-link" href="/php-project/display-product.php">Apartments & Suites</a>
 					        </li>
 					        <li class="nav-item">
 					       		<a class="nav-link" href="/php-project/nearby.php">Nearby Attractions</a>
@@ -45,6 +45,9 @@
 					        </li>
 					        <li class="nav-item">
 					       		<a class="nav-link" href="/php-project/contact.php">Contact</a>
+					        </li>
+							<li class="nav-item">
+					       		<a class="nav-link" href="/php-project/member-login/login.php">User Login</a>
 					        </li>
 					    </ul>
 					</div>

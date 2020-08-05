@@ -5,6 +5,9 @@ if((isset($_POST['title'])&& $_POST['title'] !='') && (isset($_POST['price'])&& 
 $title = $conn->real_escape_string($_POST['title']);
 $des = $conn->real_escape_string($_POST['description']);
 $price = $conn->real_escape_string($_POST['price']);
+$size1 = $conn->real_escape_string($_POST['size']);
+$beds1 = $conn->real_escape_string($_POST['bed']);
+$accommodates1 = $conn->real_escape_string($_POST['accommodates']);
 //Checkbox data store in database
 $checkbox1=$_POST['facilites'];  
 	$chk="";  
@@ -22,7 +25,8 @@ $folder = '/php-project/img/';
         $imageTmpName = $_FILES['files']['tmp_name'][$key];
         $imageName = $_FILES['files']['name'][$key];
         move_uploaded_file($imageTmpName,$folder.$imageName);
-$sql="INSERT INTO project_product(title, price, image, description, facilites, files) VALUES ('".$title."','".$price."', '".$filename."', '".$des."', '".$chk."', '".$imageName."' )";
+$sql="INSERT INTO project_product(title, price, size, bed, accommodates, image, description, facilites, files) 
+VALUES ('".$title."', '".$price."', '".$size1."', '".$beds1."', '".$accommodates1."', '".$filename."', '".$des."', '".$chk."', '".$imageName."' )";
 }
 
 session_start();

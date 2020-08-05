@@ -1,4 +1,4 @@
-<!-- <?php include 'header.php';?>
+ <?php include 'header.php';?>
 
 <?php
 error_reporting(0);

@@ -3,7 +3,12 @@
 		max-width:980px !important;
 	}
 }
-
+fieldset{
+	width: 170px;
+	margin: auto auto;
+    margin-top: 20%;
+    padding: 20px;
+}
 header{
 	font-size: 15px;
 	background-color: black;
@@ -428,4 +433,69 @@ button:focus {
 }
 .apart .room-booking-form input{
 	margin:-3px !important;
+}
+
+.form-header {
+	width: 30%;
+	margin: 50px auto 0px;
+	color: white;
+	background: #D97B34;
+	text-align: center;
+	border: 1px solid #D97B34;
+	border-bottom: none;
+	border-radius: 10px 10px 0px 0px;
+	padding: 20px;
+}
+.form-login, .content {
+	width: 30%;
+	margin: 0px auto;
+	padding: 20px;
+	border: 1px solid #D97B34;
+	background: white;
+	border-radius: 0px 0px 10px 10px;
+	margin-bottom: 50px;
+}
+p a{
+	color: #D97B34 !important;
+}
+.input-group {
+	margin: 10px 0px 10px 0px;
+}
+
+.input-group label {
+	display: block;
+	text-align: left;
+	margin: 3px;
+}
+.input-group input {
+	height: 30px;
+	width: 93%;
+	padding: 5px 10px;
+	font-size: 16px;
+	border-radius: 5px;
+	border: 1px solid #D97B34;
+}
+.btn {
+	padding: 10px;
+	font-size: 15px;
+	color: white;
+	background: #5F9EA0;
+	border: none;
+	border-radius: 5px;
+}
+.error {
+	width: 92%; 
+	margin: 0px auto; 
+	padding: 10px; 
+	border: 1px solid #a94442; 
+	color: #a94442; 
+	background: #f2dede; 
+	border-radius: 5px; 
+	text-align: left;
+}
+.success {
+	color: #3c763d; 
+	background: #dff0d8; 
+	border: 1px solid #3c763d;
+	margin-bottom: 20px;
 }

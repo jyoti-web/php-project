@@ -24,7 +24,7 @@
 				</a>
 			</div>
 			<div class="form container" style="width: 980px; height: 80px;">
-				<form style="display: flex;" action="/php-project/apart-suites.php"> 
+				<form style="display: flex;" action="/php-project/display-product.php"> 
 					<span>
 						<label>Check In</label></br>
 						<input type="text"  class="form-control" id="in" name="in" placeholder="Check-In" value="Check-In" required>
@@ -165,5 +165,3 @@
 	</section>
 </body>
 <?php include 'footer.php';?>
-<?php include 'map.php'; ?>
-<script type="text/javascript"></script>

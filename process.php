@@ -25,6 +25,9 @@
 					<label>Shower</label><input type="checkbox" name="facilites[]" value='<i class="fa fa-shower"></i>'>
 					<label>Bath</label><input type="checkbox" name="facilites[]" value='<i class="fa fa-bath"></i>'><br />
 					<label>Product Gallery</label><input type="file" name="files[]" multiple accept="image/*">
+					<label>Size:</label><input type="text" name="size">
+					<label>Beds:</label><input type="text" name="bed">
+					<label>Accommodates:</label><input type="text" name="accommodates">
 					<input type="submit" name="submit" id="submit_form">
 					<input type="reset" name="reset">
  				</form>
