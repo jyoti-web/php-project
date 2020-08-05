@@ -1,4 +1,4 @@
-
+<?php include('server.php') ?>
 <?php include('../header.php');?>
 
 <body>
@@ -8,8 +8,8 @@
 	</div>
 	
 	<form method="post" action="login.php" class="form-login">
+	<?php include 'errors.php' ; ?>
 
-		<?php include('errors.php'); ?>
 
 		<div class="input-group">
 			<label>Username</label>
