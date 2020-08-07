@@ -87,22 +87,41 @@
                             </span>
                             <form action="book-room.php" method="post">
                                 <div class="data-result" style="border: 1px solid #D97B34; border-bottom: 0px !important; padding-bottom:5px;">
-                                    <input type="text"  class="form-control" id="in" name="ch_in" placeholder="Check-In" value="Check-In" required >
-                                    <input type="text" class="form-control" id="out" name="check_out" placeholder="Check-Out" value="Check-Out" required>
-                                    <input type="number" name="check_adults" id="adults" min="1" value="1" placeholder="1 Adults" max="2">
-                                    <input type="number" style="margin-bottom:5px;" name="check_kids" id="kids" min="0" value="<?php //echo (isset($y))?$y:'';?>" placeholder="0 kids" max="1">
+                                    <input type="text"  class="form-control" id="in" name="ch_in" placeholder="Check-In" required >
+                                    <input type="text" class="form-control" id="out" name="check_out" placeholder="Check-Out" required>
+                                    <input type="number" name="check_adults" id="adults" min="1"  placeholder="1 Adults" max="2">
+                                    <input type="number" style="margin-bottom:5px;" name="check_kids" id="kids"  placeholder="0 kids" max="1" min="0">
+                                    <button onClick="myFunction();">try it</button>
                                     <div id="num" style="padding: 10px 10px 10px 10px; font-size:14px;">
                                     </div>
+                                    <?php $sql = "SELECT ch_in FROM booking";
+                                        $result = $conn->query($sql);
+                                        if ($result->num_rows > 0) {
+                                        // output data of each row
+                                        while($row = $result->fetch_assoc()) {
+                                            //echo $row['ch_in'];
+                                       ?>
                                     <script>
                                         $(document).ready(function() {
                                         var startDate;
                                         var endDate;
+                                        //var undate = ["<?php echo $row['ch_in']; ?>"];
+                                        var unavailableDates =  ["9-8-2020", "14-8-2020", "15-8-2020"];                                     
+                                        function unavailable(date) {
+                                            dmy = date.getDate() + "-" + (date.getMonth() + 1) + "-" + date.getFullYear();
+                                            if ($.inArray(dmy, unavailableDates) == -1) {
+                                                return [true, ""];
+                                            } else {
+                                                return [false, "", "Unavailable"];
+                                            }
+                                        }
                                         $( "#in" ).datepicker({
                                         dateFormat: 'dd-mm-yy',
-                                        minDate: new Date()
+                                        minDate: new Date(),
+                                        beforeShowDay: unavailable
                                         })
                                         $( "#out" ).datepicker({
-                                        dateFormat: 'dd-mm-yy'
+                                        dateFormat: 'dd-mm-yy'    
                                         });
                                         $('#in').change(function() {
                                         startDate = $(this).datepicker('getDate');
@@ -132,6 +151,11 @@
                                         });
                                         });
                                         </script>
+                                         <?php
+                                 }
+                                } else {
+                                echo "0 results";
+                                }?>
                                         <a class="book" onClick= "return bill()" id="search" style="padding-left:60px!important;
                                 padding-right:61px !important;">Book Now</a>
                                 </div>
@@ -144,6 +168,7 @@
                                         show('num'); 
                                     } 
                                 </script>
+                               
                                 <input type="submit" name="booking" value= "Confirm Booking">
                             </form>				 		
                         </div>
@@ -160,6 +185,17 @@
         </div>
     </div>
 </div>
+<script>
+function myFunction() {
+var indate = document.getElementById('adults').value;
+  if (indate == 2) {
+    document.getElementById("kids").max = "0";
+    //aler(document.getElementById("kids").max = "0");
+  }else if (indate == 1){
+    document.getElementById("kids").max = "1";
 
+  }
+}
+</script>
         
 <?php include 'footer.php';?>
