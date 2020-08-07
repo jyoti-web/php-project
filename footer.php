@@ -1,8 +1,8 @@
 <footer>
 	<div class="footer">
-		<div class="container" style="width: 870px;">
+		<div class="container" style="width: 850px;">
 			<div class="row">
-				<div class="col-sm-5">
+				<div class="col-sm-4">
 					<h4>Contact Us</h4>
 					<p>info@mysite.com</p>
 					<p>Tel: 123-456-7890</p>
@@ -17,7 +17,7 @@
 					<h4>Address</h4>
 					<p>500 Terry Francois Street<br>San Francisco, CA  94158</p>
 				</div>
-				<div class="col-sm-3">
+				<div class="col-sm-4">
 					<h4>We Accept</h4>
 					<span class="cards">
 						<img src="/php-project/img/34.png">
@@ -30,10 +30,10 @@
 		</div>
 	</div>
 	<div class="copy-footer" style="padding-bottom: 10px;" >
-		<div class="container" style="width: 780px;">
+		<div class="container" style="width: 850px;">
 			<div class="copy-write">
 				<nav class="navbar navbar-expand-lg">
-					<div class="navbar-collapse" id="navbarNav">
+					<div id="navbarNav">
 					    <ul class="navbar-nav">
 					        <li class="nav-item active" style="border:none;">
 					        	<a class="nav-link" href="/php-project/index.php">Home <span class="sr-only">(current)</span></a>
@@ -50,11 +50,15 @@
 					        <li class="nav-item">
 					       		<a class="nav-link" href="php-project/contact.php">Contact</a>
 					        </li>
+							<li class="nav-item">
+					       		<a class="nav-link" href="/php-project/member-login/login.php">User Login</a>
+					        </li>
 					    </ul>
 					</div>
 				</nav>
 				<p class="text-center" style="color: #AAA8A8;">© 2023 by Loft City. Proudly created with Wix.com</p>
-				<sub style="color: #AAA8A8; margin-bottom: 10px;">Image by Lexe-I has not been altered and is used in compliance with CC License. If you retain this image, please do not alter it.</sub>
+				<p style="color: #AAA8A8; margin-bottom: 10px; font-size:12px;" class="text-center">Image by Lexe-I has not been altered and is used in compliance with CC License.
+				 If you retain this image, please do not alter it.</p>
 			</div>
 		</div>
 	</div>
@@ -82,9 +86,9 @@
 $(document).ready(function() {
 var startDate;
 var endDate;
-var minDate = new Date();
  $( "#in" ).datepicker({
-dateFormat: 'dd-mm-yy'
+dateFormat: 'dd-mm-yy',
+minDate: new Date()
 })
  $( "#out" ).datepicker({
 dateFormat: 'dd-mm-yy'
@@ -110,8 +114,8 @@ dt_t2_tm=dt_t2.getTime();
 var one_day = 24*60*60*1000; 
 var diff_days=Math.abs((dt_t2_tm-dt_t1_tm)/one_day) 
 $("#result").html(t1 + " - " + t2 + " / " +diff_days + " night(s)");
-
 $("#result").show();
-})
-})
+});
+});
+
 </script>

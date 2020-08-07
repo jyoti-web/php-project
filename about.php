@@ -7,7 +7,7 @@
 			</div>
 		</div>
 		<div class="about">
-			<div class="container" style="width: 840px;">
+			<div class="container" style="width: 850px;">
 				<h3>There’s a new way to stay in a city: live like a local.</h3>
 				<h5>We provide fully furnished, high-end, affordable homes ranging from one bedroom to as large as eight bedrooms.  You can rely on us to find you a perfect place to call home during your stay in San Francisco. Our goal is to provide you with an unforgettable living experience.</h5>
 			</div>
@@ -20,7 +20,7 @@
 			</div>
 		</div>
 		<div class="service-list" style="background-color: #F6F6F6;">
-			<div class="container" style="width: 840px;">
+			<div class="container" style="width: 850px;">
 				<div class="row">
 					<div class="col-sm-4">
 						<h3>Communication and entertainment:</h3>

@@ -57,7 +57,7 @@
 	</section>
 	<section id="services">
 		<div class="container">
-			<div class="services">
+			<div class="services align-self-center text-center">
 				<span>
 					<img src="/php-project/img/11.png" alt="">
 					<h6>Free WiFi</h6>
@@ -82,13 +82,13 @@
 		</div>		
 	</section>
 	<section id="loft-city-hoilday">
-		<div class="container" style="width: 840px;">
+		<div class="container" style="width: 850px;">
 			<h3>Loft City - Urban Holiday Rentals in SF</h3>
 			<h5>I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font. Feel free to drag and drop me anywhere you like on your page. I’m a great place for you to tell a story and let your users know a little more about you. >></h5>
 		</div>
 	</section>
 	<section class="map">
-		<div class="container" style="width: 895px;">
+		<div class="container" style="width: 850px;">
 			<div class="row">
 				<div class="col-sm-6" id="list">
 					<h4>Why book with us</h4>
@@ -124,7 +124,7 @@
 		</div>
 	</section>
 	<section id="people-say" style="background-color: #F6F6F6">
-		<div class="container" style="width: 895px;">
+		<div class="container" style="width: 850px;">
 			<div class="row">
 				<div class="col-sm-6" id="list">
 					<h4>People say the nicest things… </h4>
@@ -149,7 +149,7 @@
 					</div>
 				</div>
 				<div class="col-sm-6">
-					<div class="promotion" style="background-color: white; padding: 65px 30px;">
+					<div class="promotion" style="display:flex; background-color: white; padding: 65px 30px;">
 						<div class="img-2">
 							<img src="/php-project/img/23.jpg" href="">
 							<img src="/php-project/img/22.jpg" href="">

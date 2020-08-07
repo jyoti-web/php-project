@@ -7,7 +7,7 @@
 			</div>
 		</div>
 		<section class="map" style="background-color: #F6F6F6; height: 350px;">
-			<div class="container" style="width: 895px;">
+			<div class="container" style="width: 850px;">
 				<div class="row">
 					<div class="col-sm-6" id="list">
 						<h5>I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font. I’m a great place for you to tell a story and let your users know a little more about you.</h5>		
@@ -36,7 +36,7 @@
 			</div>
 		</section>
 		<section class="mission" style="height: 350px;">
-			<div class="container" style="width: 895px;">
+			<div class="container" style="width: 850px;">
 				<div class="row">
 					<div class="col-sm-6">
 						<img src="/php-project/img/51.jpg" width="450px" height="350px;" style="object-fit: cover;">
@@ -50,7 +50,7 @@
 			</div>
 		</section>
 		<section class="castro" style="background-color: #F6F6F6; height: 350px;" >
-			<div class="container" style="width: 895px;">
+			<div class="container" style="width: 850px;">
 				<div class="row">
 					<div class="col-sm-6" id="list">
 						<h3 style="margin-bottom: 20px;">The Castro</h3>
@@ -63,7 +63,7 @@
 			</div>
 		</section>
 		<section class="mission" style="height: 390px;">
-			<div class="container" style="width: 895px;">
+			<div class="container" style="width: 850px;">
 				<div class="row">
 					<div class="col-sm-6">
 						<img src="/php-project/img/53.jpg" width="450px" height="390px;" style="object-fit: cover;">
@@ -77,7 +77,7 @@
 			</div>
 		</section>
 		<section class="castro" style="background-color: #F6F6F6; height: 350px;" >
-			<div class="container" style="width: 895px;">
+			<div class="container" style="width: 850px;">
 				<div class="row">
 					<div class="col-sm-6" id="list">
 						<h3 style="margin-bottom: 20px;">Golden Gate Bridge</h3>
@@ -91,7 +91,7 @@
 			</div>
 		</section>
 		<section class="mission" style="height: 390px;">
-			<div class="container" style="width: 895px;">
+			<div class="container" style="width: 850px;">
 				<div class="row">
 					<div class="col-sm-6">
 						<img src="/php-project/img/55.jpg" width="450px" height="390px;" style="object-fit: cover;">

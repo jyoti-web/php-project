@@ -16,21 +16,23 @@
 </head>
 <title>Health & Medical</title>
 	<header>
-		<div class="container">
-			<div class="loft-city" style="height: 40px;">
-				<div class="left">
-					<h2>Loft City</h2><h4> Holiday Apartments in San Francisco</h4>
-				</div>
-				<div class="right">
-					<p><a href="mailto:infosite@gmail.com" data-type="mail">infosite@gmail.com</a></p><p><a href="tel:9176-372-281">9176-372-281</a></p><button class="btn-submit">BOOK NOW</button>
+		<div class="top-bar">
+			<div class="container">
+				<div class="loft-city" style="height: 40px;">
+					<div class="left">
+						<h2>Loft City</h2><h4> Holiday Apartments in San Francisco</h4>
+					</div>
+					<div class="right">
+						<p><a href="mailto:infosite@gmail.com" data-type="mail">infosite@gmail.com</a></p><p><a href="tel:9176-372-281">9176-372-281</a></p><button class="btn-submit">BOOK NOW</button>
+					</div>
 				</div>
 			</div>
 		</div>
 		<div class="header" style="background-color: #F6F6F6; color: #000;">
 			<div class="container">
 				<nav class="navbar navbar-expand-lg">
-					<div class="navbar-collapse" id="navbarNav">
-					    <ul class="navbar-nav">
+					<div class="text-center align-self-center" id="navbarNav">
+					    <ul class="navbar-nav" >
 					        <li class="nav-item active" style="border:none;">
 					        	<a class="nav-link" href="/php-project/index.php">Home <span class="sr-only">(current)</span></a>
 					        </li>

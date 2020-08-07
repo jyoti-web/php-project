@@ -7,7 +7,7 @@
 			</div>
 		</div>
 		<section class="map" style="background-color: #F6F6F6; height: 350px;">
-			<div class="container" style="width: 895px;">
+			<div class="container" style="width: 850px;">
 				<div class="row">
 					<div class="col-sm-6" id="list">
 						<h5>If you have any questions, please contact us by telephone or email and we'll get back to you as soon as possible. We look forward to hearing from you.</h5>		
@@ -19,7 +19,7 @@
 			</div>
 		</section>
 		<Section class="contact-form">
-			<div class="container" style="width: 895px;">
+			<div class="container" style="width: 850px;">
 				<div class="row">
 					<div class="col-sm-6">
 						<form style="display: grid; padding: 0px 18px;" class="con-form">

@@ -1,19 +1,19 @@
 <?php include 'header.php';?>
 	<div class="apart">
-		<div class="container" style="width: 900px;">
+		<div class="container" style="width: 850px;">
 			<h3>Apartments & Suites</h3>
 			<div class="margin-btm" style="height: 25px;"></div>
 		</div>
 		<div class="booking">	
 		 	<div class="apart-form">
-		 		<div class="container" style="width: 840px;">
+		 		<div class="container" style="width: 850px;">
 		 			<div class="our-room">
 				 		<h5>Our Rooms</h5>
 				 	</div>
 		 			<hr>
 					<form style="display: flex;" action="#" method="post" onsubmit="return false;">
 						<span>
-							<input type="text" name="in" id="in" placeholder="Check-In" required >
+							<input type="text" name="in" id="in" placeholder="Check-In" required>
 						</span>
 						<span>
 							<input type="text" name="out" id="out" placeholder="Check-Out" required>
@@ -25,28 +25,38 @@
 							<input type="number" name="kids" id="kids" min="0" value="0" placeholder="0 kids">
 						</span>
 						<span>
-							<button class="btn" id="search" type="submit">Search</button>
+							<button class="btn" id="search" type="submit" onClick="GFG_Fun()">Search</button>
 						</span>
 					</form>
 					<hr>
 					<div class="display-booking">
-						<form class="data-show">
+						<form id="data-show">
 							<h6 style="font-size: 16px;"><span style="font-weight: 100;">Result For:</span> 
 								<span class="in-out" id="result"> 
 								</span>
-								<input type="reset" name="reset" value="clear" id="hide" class="text-right" style="border:none; background-color: transparent; font-size: 16px; color: #D97B33;">
+								<input type="reset" name="reset" value="clear" id="hide" onClick="display()"
+								class="text-right" style="border:none; background-color: transparent; 
+								font-size: 16px; color: #D97B33;">
 							</h6>						
 							<hr>
 						</form>
-						<script type="text/javascript">
-							$("#hide").click(function(){
-							  $(".data-show").hide();
-							});
-							$("#search").click(function(){
-							  $(".data-show").show();
-							});
-						</script>	
-					</div>
+						<script> 
+							function hide(divId){
+								$("#" + divId).hide();
+							}
+							function display(){
+								hide('data-show');
+							}
+					
+							function show(divId) { 
+								$("#" + divId).show(); 
+							} 
+					
+							function GFG_Fun() { 
+								show('data-show'); 
+							} 
+						</script> 
+						</div>
 						<?php require_once("config.php");
 						$result1 = mysqli_query($conn,"SELECT * FROM project_product");
 						if (mysqli_num_rows($result1) > 0) {
@@ -58,7 +68,7 @@
 						 href="single-page.php?page=single-page&id=<?=$row['id']; ?>">
 
 							<?php //echo $row["id"];?>
-						    <?php echo '<img src=/php-project/img/'.$row["image"].' style="width:240px; height:170px;">'?>
+						    <?php echo '<img src=/php-project/img/'.$row["image"].' style="width:240px; height:170px; object-fit:cover;">'?>
 						    <span style="padding: 0px 40px 0px 25px; width: 445px;">
 						    	<h5 style="font-size:20px; font-weight: 700;"><?php echo $row["title"]; ?></h5>	    	
 							    <sub><?php echo $row["description"];?></sub>
