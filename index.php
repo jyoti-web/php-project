@@ -26,23 +26,23 @@
 			<div class="form container" style="width: 980px; height: 80px;">
 				<form style="display: flex;" action="/php-project/display-product.php"> 
 					<span>
-						<label>Check In</label></br>
+						<label>Check In</label><br>
 						<input type="text"  class="form-control" id="in" name="in" placeholder="Check-In" value="Check-In" required>
 					</span>
 					<span>
-						<label>Check Out</label></br>
+						<label>Check Out</label><br>
 						<input type="text"  class="form-control" id="out" name="out" placeholder="Check-Out" value="Check-Out	" required>
 					</span>
 					<span>
-						<label>Adults</label></br>
+						<label>Adults</label><br>
 						<input type="number" name="adults" id="adults" min="1" value="1">
 					</span>
 					<span>
-						<label>kids</label></br>
+						<label>kids</label><br>
 						<input type="number" name="kids" id="kids" min="0" value="0">
 					</span>
 					<span>
-						<label>&nbsp;</label></br>
+						<label>&nbsp;</label><br>
 						<button class="btn" id="search" type="submit" style="background-color: white; height: 33px; border: none; border-radius: 0px;width: 185px;">Search</button>
 					</span>
 				</form>

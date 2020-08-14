@@ -23,7 +23,7 @@
 						<h2>Loft City</h2><h4> Holiday Apartments in San Francisco</h4>
 					</div>
 					<div class="right">
-						<p><a href="mailto:infosite@gmail.com" data-type="mail">infosite@gmail.com</a></p><p><a href="tel:9176-372-281">9176-372-281</a></p><button class="btn-submit">BOOK NOW</button>
+						<p><a href="mailto:infosite@gmail.com" data-type="mail">infosite@gmail.com</a></p><p><a href="tel:9176-372-281">9176-372-281</a></p><a href="/php-project/display-product.php"><button class="btn-submit">BOOK NOW</button></a>
 					</div>
 				</div>
 			</div>
@@ -34,7 +34,7 @@
 					<div class="text-center align-self-center" id="navbarNav">
 					    <ul class="navbar-nav" >
 					        <li class="nav-item active" style="border:none;">
-					        	<a class="nav-link" href="/php-project/index.php">Home <span class="sr-only">(current)</span></a>
+					        	<a class="nav-link" href="/php-project/">Home <span class="sr-only">(current)</span></a>
 					        </li>
 					        <li class="nav-item">
 					        	<a class="nav-link" href="/php-project/display-product.php">Apartments & Suites</a>
@@ -51,6 +51,9 @@
 							<li class="nav-item">
 					       		<a class="nav-link" href="/php-project/member-login/login.php">User Login</a>
 					        </li>
+							<li class="nav-item">
+								<a class="nav-link" href="/php-project/Blogs/blog.php">Blog</a>
+							</li>
 					    </ul>
 					</div>
 				</nav>

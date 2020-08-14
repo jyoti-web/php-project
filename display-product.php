@@ -1,4 +1,34 @@
 <?php include 'header.php';?>
+<?php
+$min = 100;
+$max = 300;
+
+if (! empty($_POST['min_price'])) {
+    $min = $_POST['min_price'];
+}
+
+if (! empty($_POST['max_price'])) {
+    $max = $_POST['max_price'];
+}
+
+?>
+<script>
+  $(document).ready(function() {
+    $("#slider-range").slider({
+      range: true,
+      min: 100,
+      max: 5000,
+      values: [ '<?php echo $min; ?>', '<?php echo $max; ?>' ],
+      slide: function( event, ui ) {
+        $( "#amount" ).html( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
+		$( "#min" ).val(ui.values[ 0 ]);
+		$( "#max" ).val(ui.values[ 1 ]);
+      }
+      });
+    $( "#amount" ).html( "$" + $( "#slider-range" ).slider( "values", 0 ) +
+     " - $" + $( "#slider-range" ).slider( "values", 1 ) );
+  });
+  </script>
 	<div class="apart">
 		<div class="container" style="width: 850px;">
 			<h3>Apartments & Suites</h3>
@@ -56,13 +86,37 @@
 								show('data-show'); 
 							} 
 						</script> 
-						</div>
-						<?php require_once("config.php");
-						$result1 = mysqli_query($conn,"SELECT * FROM project_product");
+					</div>
+					<div class="form-price-range-filter">
+						<form method="post" action="">
+							<div class="slider-min-max">
+								<input type="" id="min" name="min_price"
+									value="<?php echo $min; ?>" class="input-count">
+								<div id="slider-range"></div>
+								<input type="" id="max" name="max_price"
+									value="<?php echo $max; ?>" class="input-count">
+							</div>
+							<div>
+								<input type="submit" name="submit_range"
+									value="Filter Product" class="filter">
+							</div>
+						</form>
+					</div>
+					<?php require_once("config.php");
+						$limit = 5;  
+						if (isset($_GET["page"])) {
+							$page  = $_GET["page"]; 
+							} 
+							else{ 
+							$page=1;
+							};  
+						$start_from = ($page-1) * $limit; 
+						$result1 = mysqli_query($conn,"SELECT * FROM project_product WHERE price BETWEEN '$min' AND '$max' ORDER BY id ASC LIMIT $start_from, $limit " );
 						if (mysqli_num_rows($result1) > 0) {
 						$i=0;
 						while($row = mysqli_fetch_array($result1)) {
 						?>
+						<hr>
 						<div class="room-booking" >
 						<a style='display: inline-flex; color:black; text-decoration:none;'
 						 href="single-page.php?page=single-page&id=<?=$row['id']; ?>">
@@ -77,7 +131,14 @@
 							</span>
 						    <span class="price-booking text-center" style="padding-left:10px; padding-top: 25px;">
 								<sub>From</sub><br>
-								<price>$<?php echo $row["price"]; ?></price><br>
+								<?php if (($row["sale_price"] != 0) && ($row["price"] != 0)) {
+									echo "<del>" 
+									. $row["price"] . "</del><br>" . " " . 
+									"<price>" . $row["sale_price"] . "</price>";
+								}
+								else if (($row["sale_price"] == 0) && ($row["price"] != 0)){
+									echo "<price> $" . $row["price"] . "</price>";
+								}?>
 								<button class="btn1" style="margin-top: 20px;">More Info</button>
 						    </span>
 						    <?php //echo '<img src=/php-project/img/'.$row["files"].' style="width:300px; height:100px; object-fit:contain;">'?>
@@ -89,8 +150,58 @@
 						}
 						}
 						?>
+						<?php  
+
+						$result_db = mysqli_query($conn,"SELECT COUNT(id) FROM project_product"); 
+						$row_db = mysqli_fetch_row($result_db);  
+						$total_records = $row_db[0];  
+						$total_pages = ceil($total_records / $limit); 
+						/* echo  $total_pages; */
+						$pagLink = "<ul class='pagination'>";  
+						for ($i=1; $i<=$total_pages; $i++) {
+							$pagLink .= "<li class='page-item'><a class='page-link' href='display-product.php?page=".$i."'>".$i."</a></li>";	
+						}
+						echo $pagLink . "</ul>";  
+						?>
 				</div>
 			</div>
 		</div>
 	</div>
+	<style>
+		.slider-min-max{
+			display:flex;
+		}
+		#slider-range.ui-slider{
+			width:100%;
+			margin:10px 14px;
+			height:20px;
+			border-radius: 30px;
+    		border-color: #D97B34;
+		}
+		.ui-slider-horizontal .ui-slider-handle {
+			top:22px !important;
+			border-radius: 50% 50% 0;
+			transform: rotateZ(226deg);
+			border-color: #b15108;
+			background-color:#D97B34;
+		}
+		.ui-widget-header{
+			background-color:#D97B34;
+			border-radius:30px;
+		}
+		.input-count{
+			width: 40px!important;
+    border-radius: 50%;
+    text-align: center;
+		}
+		.filter{
+			text-align:center;
+			margin:auto;
+			margin-top:30px !important;
+			display:grid;
+		}
+		li{
+			margin-left:0px !important;
+		}
+		</style>
 <?php include 'footer.php';?>

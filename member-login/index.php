@@ -13,6 +13,7 @@
 	}
 
 ?>
+<?php include 'login-nav.php';?>
 <?php include '../header.php';?>
 <body>
 	<div class="form-header">
@@ -34,11 +35,18 @@
 
 		<!-- logged in user information -->
 		<?php  if (isset($_SESSION['username'])) : ?>
-			<p>Welcome <strong><?php echo $_SESSION['username']; ?></strong></p>
-			<p> <a href="/php-project/process.php" style="color: red;">Add Product</a> </p>
+			<p class='text-center' style='font-size:20px;'>Welcome <strong><?php echo "<h4 class='text-center'>" . $_SESSION['username'] . "</h4>"; ?></strong></p>
 		<?php endif ?>
+		<p class="text-center"><i class="fa fa-user-circle" aria-hidden="true"></i></p>
+
+
 	</div>
 		
 </body>
+<style>
+.content i.fa{
+	font-size: 70px !important;
+}
+</style>
 
 <?php include '../footer.php';?>

@@ -212,7 +212,7 @@ ul.navbar-nav{
     color: #000000;
 }
 #list{
-	padding: 30px 0px;
+	padding: 30px 15px;
 }
 .map h4,
 #people-say h4{
@@ -267,6 +267,10 @@ p{
 }
 .margin-btm{
 	margin-bottom: 30px;
+}
+.margin-btm-15px{
+	margin-bottom: 15px;
+
 }
 .img-2 img{
 	width: 173px;
@@ -515,3 +519,22 @@ p a{
 .form-control {
 	width: unset !important;
 }
+.header .navbar-nav li.active > a {
+	color: rgba(211, 9, 9, 0.808);
+  }
+.post_form{
+	justify-content: center;
+
+  }
+  .post_form input,
+  .post_form textarea{
+	  width:100%;
+  }
+  .post_form input[type="submit"],
+  .post_form input[type="reset"]{
+	  width: 44%;
+	  margin:20px;
+  }
+  .post_form label{
+	  margin-top:10px !important;
+  }

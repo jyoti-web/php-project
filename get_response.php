@@ -1,10 +1,13 @@
 <?php 
+include "header.php";
 require_once("config.php");
 if((isset($_POST['title'])&& $_POST['title'] !='') && (isset($_POST['price'])&& $_POST['price'] !=''))
 {
+    //&& (isset($_Post['sale_price']) < (isset($_Post['sale_price']))
 $title = $conn->real_escape_string($_POST['title']);
 $des = $conn->real_escape_string($_POST['description']);
 $price = $conn->real_escape_string($_POST['price']);
+$price1 = $conn->real_escape_string($_POST['sale_price']);
 $size1 = $conn->real_escape_string($_POST['size']);
 $beds1 = $conn->real_escape_string($_POST['bed']);
 $accommodates1 = $conn->real_escape_string($_POST['accommodates']);
@@ -25,8 +28,8 @@ $folder = '/php-project/img/';
         $imageTmpName = $_FILES['files']['tmp_name'][$key];
         $imageName = $_FILES['files']['name'][$key];
         move_uploaded_file($imageTmpName,$folder.$imageName);
-$sql="INSERT INTO project_product(title, price, size, bed, accommodates, image, description, facilites, files) 
-VALUES ('".$title."', '".$price."', '".$size1."', '".$beds1."', '".$accommodates1."', '".$filename."', '".$des."', '".$chk."', '".$imageName."' )";
+$sql="INSERT INTO project_product(title, price, sale_price,  size, bed, accommodates, image, description, facilites, files) 
+VALUES ('".$title."', '".$price."' , '".$price1."', '".$size1."', '".$beds1."', '".$accommodates1."', '".$filename."', '".$des."', '".$chk."', '".$imageName."' )";
 }
 
 session_start();
@@ -42,5 +45,6 @@ else{
 else
 {
 echo "Please fill Name and Email";
-}    
+}  
+include "footer.php"  
 ?>

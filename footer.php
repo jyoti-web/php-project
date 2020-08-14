@@ -86,9 +86,20 @@
 $(document).ready(function() {
 var startDate;
 var endDate;
+var unavailableDates = ["9-8-2020", "14-8-2020", "15-3-2012"];
+
+function unavailable(date) {
+    dmy = date.getDate() + "-" + (date.getMonth() + 1) + "-" + date.getFullYear();
+    if ($.inArray(dmy, unavailableDates) == -1) {
+        return [true, ""];
+    } else {
+        return [false, "", "Unavailable"];
+    }
+}
  $( "#in" ).datepicker({
 dateFormat: 'dd-mm-yy',
-minDate: new Date()
+minDate: new Date(),
+beforeShowDay: unavailable
 })
  $( "#out" ).datepicker({
 dateFormat: 'dd-mm-yy'
@@ -117,5 +128,10 @@ $("#result").html(t1 + " - " + t2 + " / " +diff_days + " night(s)");
 $("#result").show();
 });
 });
-
+</script>
+<script>
+$(".header .navbar-nav .nav-item a").on("click", function () {
+	$(".header .navbar-nav").find("li.active").removeClass("active");
+	$(this).parent("li").addClass("active");
+});
 </script>
