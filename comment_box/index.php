@@ -1,6 +1,6 @@
-<?php //include "../header.php" ?>
 <script>
-
+// var reply = document.getElementById('reply');
+// if(!reply){
 	function commentSubmit(){
 		if(form1.name.value == '' || form1.comments.value == ''){ //exit if one of the field is blank
 			alert('Enter your message !');
@@ -21,11 +21,14 @@
 	
 		$(document).ready(function(e) {
 			$.ajaxSetup({cache:false});
-			setInterval(function() {$('#comment_logs').load('/php-project/comment_box/logs.php');}, 1000);
+			setInterval(function() {
+				$('#comment_logs').load('/php-project/comment_box/logs.php');
+				}, 1000);
 		});
-		
+	
 </script>
 <body>
+<div id="comment_input">
 	<h3 style="margin-top:20px; font-size:20px;">Comments</h3>
     <div class="comment_input">
         <form name="form1">
@@ -35,6 +38,17 @@
         </form>
 		<hr>
     </div>
+</div>
+<?php
+$result = mysqli_query($conn, "SELECT * FROM comments ORDER BY id DESC");
+$count = mysqli_num_rows($result);
+if($count > 0){
+	echo "<div id='comment-count' class='text-right'>";
+		echo "<span id='count-number'>". $count . "</span> Comment(s)";
+	echo "</div>";
+	echo "<hr>";
+}
+?>
     <div id="comment_logs">
     	Loading comments...
     </div>

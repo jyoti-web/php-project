@@ -22,11 +22,11 @@
 			<div class="container" style="width: 850px;">
 				<div class="row">
 					<div class="col-sm-6">
-						<form style="display: grid; padding: 0px 18px;" class="con-form">
-							<input type="text" name="con-name" placeholder="Name" id="con-name" required>
-							<input type="email" name="con-email" placeholder="Email" id="con-email" required>
-							<input type="tel" name="con-phone" placeholder="Phone" id="con-phone">
-							<textarea cols="20" rows="6" name="con-area" id="con-area" placeholder="Type your message here..."></textarea>
+						<form style="display: grid; padding: 0px 18px;" class="con-form" method="post" action="contact-response.php">
+							<input type="text" name="con_name" placeholder="Name" id="con_name" required>
+							<input type="email" name="con_email" placeholder="Email" id="con_email" required>
+							<input type="tel" name="con_phone" placeholder="Phone" id="con_phone">
+							<textarea cols="20" rows="6" name="con_area" id="con-area" placeholder="Type your message here..."></textarea>
 							<input type="submit" name="con-submit" id="con-submit">
 						</form>
 					</div>

@@ -40,6 +40,21 @@ if (! empty($_POST['max_price'])) {
 		 			<div class="our-room">
 				 		<h5>Our Rooms</h5>
 				 	</div>
+					 <div class="form-price-range-filter">
+						<form method="post" action="">
+							<div class="slider-min-max">
+								<input type="" id="min" name="min_price"
+									value="<?php echo $min; ?>" class="input-count">
+								<div id="slider-range"></div>
+								<input type="" id="max" name="max_price"
+									value="<?php echo $max; ?>" class="input-count">
+							</div>
+							<div>
+								<input type="submit" name="submit_range"
+									value="Filter Product" class="filter">
+							</div>
+						</form>
+					</div>
 		 			<hr>
 					<form style="display: flex;" action="#" method="post" onsubmit="return false;">
 						<span>
@@ -87,21 +102,7 @@ if (! empty($_POST['max_price'])) {
 							} 
 						</script> 
 					</div>
-					<div class="form-price-range-filter">
-						<form method="post" action="">
-							<div class="slider-min-max">
-								<input type="" id="min" name="min_price"
-									value="<?php echo $min; ?>" class="input-count">
-								<div id="slider-range"></div>
-								<input type="" id="max" name="max_price"
-									value="<?php echo $max; ?>" class="input-count">
-							</div>
-							<div>
-								<input type="submit" name="submit_range"
-									value="Filter Product" class="filter">
-							</div>
-						</form>
-					</div>
+					
 					<?php require_once("config.php");
 						$limit = 5;  
 						if (isset($_GET["page"])) {
@@ -111,7 +112,7 @@ if (! empty($_POST['max_price'])) {
 							$page=1;
 							};  
 						$start_from = ($page-1) * $limit; 
-						$result1 = mysqli_query($conn,"SELECT * FROM project_product WHERE price BETWEEN '$min' AND '$max' ORDER BY id ASC LIMIT $start_from, $limit " );
+						$result1 = mysqli_query($conn,"SELECT * FROM project_product WHERE price BETWEEN '$min' AND '$max' ORDER BY price ASC LIMIT $start_from, $limit " );
 						if (mysqli_num_rows($result1) > 0) {
 						$i=0;
 						while($row = mysqli_fetch_array($result1)) {
@@ -184,6 +185,7 @@ if (! empty($_POST['max_price'])) {
 			transform: rotateZ(226deg);
 			border-color: #b15108;
 			background-color:#D97B34;
+			z-index:0;
 		}
 		.ui-widget-header{
 			background-color:#D97B34;

@@ -167,7 +167,7 @@
                                         show('num'); 
                                     } 
                                 </script>
-                                <button onClick="myFunction();" class="book" style="width:100%;">Confirm Booking</button>
+                                <button onClick="age();" class="book" style="width:100%;">Confirm Booking</button>
                             </form>				 		
                         </div>
                     </div>
@@ -184,7 +184,7 @@
     </div>
 </div>
 <script>
-function myFunction() {
+function age() {
 var indate = document.getElementById('adults').value;
   if (indate == 2) {
     document.getElementById("kids").max = "0";
